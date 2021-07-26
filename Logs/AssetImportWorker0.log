@@ -585,3 +585,66 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003195 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.787 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2080 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 96.1 MB.
+System memory in use after: 96.1 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2589.
+Total: 1.847000 ms (FindLiveObjects: 0.172600 ms CreateObjectMapping: 0.044000 ms MarkObjects: 1.543100 ms  DeleteObjects: 0.086700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 408.473650 seconds.
+  path: Assets/Nicholas/Scenes/button+score.unity
+  artifactKey: Guid(c6d0db2969d2bea4bacb16416e2dbb6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nicholas/Scenes/button+score.unity using Guid(c6d0db2969d2bea4bacb16416e2dbb6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '924fb74ef75fbb1e658ce2db3306debf') in 0.013928 seconds 
+  Import took 0.017296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.947862 seconds.
+  path: Assets/Nicholas/Scenes/Main.unity
+  artifactKey: Guid(c6d0db2969d2bea4bacb16416e2dbb6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nicholas/Scenes/Main.unity using Guid(c6d0db2969d2bea4bacb16416e2dbb6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7e5effec309dc64004f58b8f9c5aee') in 0.006418 seconds 
+  Import took 0.009987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.389410 seconds.
+  path: Assets/Nicholas/Scenes/button+score.unity
+  artifactKey: Guid(5323e327140e8354e9d6b8424fb5cf47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nicholas/Scenes/button+score.unity using Guid(5323e327140e8354e9d6b8424fb5cf47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad7ad833ac61060699b2c0cdf556bfb8') in 0.002537 seconds 
+  Import took 0.005680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Nicholas/Scenes/button+score.unity
+  artifactKey: Guid(5323e327140e8354e9d6b8424fb5cf47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nicholas/Scenes/button+score.unity using Guid(5323e327140e8354e9d6b8424fb5cf47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad7ad833ac61060699b2c0cdf556bfb8') in 0.002375 seconds 
+  Import took 0.004846 seconds .
+

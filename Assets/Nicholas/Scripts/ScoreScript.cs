@@ -11,9 +11,10 @@ public class ScoreScript : MonoBehaviour
     int ScoreNum = 0;
     int workerBeePrice = 10;
     int qualityPollenPrice = 5;
-    int numOfPressed;
     int addOn = 0;
     int holder = 0;
+    int holdertwo = 0;
+    int adding = 0;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class ScoreScript : MonoBehaviour
 
     public void clickScoreAdd()
     {
-        ScoreNum += 1;
+        ScoreNum += 1 + adding;
         MyscoreText.text = "" + ScoreNum;
     } 
 
@@ -41,8 +42,6 @@ public class ScoreScript : MonoBehaviour
             addOn += 1;
             holder += 1;
         }
-            
-        
 
         if (ScoreNum >= workerBeePrice && holder == 1)
         {
@@ -75,6 +74,56 @@ public class ScoreScript : MonoBehaviour
 
     public void qualityPollen()
     {
+        if (ScoreNum >= qualityPollenPrice && holdertwo == 0)
+        {
+            ScoreNum -= 5;
+            MyscoreText.text = "" + ScoreNum;
+            qualityPollenPrice += 45;
+            QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
+            adding += 1;
+            holdertwo += 1;
+        }
+
+        if (ScoreNum >= qualityPollenPrice && holdertwo == 1)
+        {
+            ScoreNum -= 50;
+            MyscoreText.text = "" + ScoreNum;
+            qualityPollenPrice += 50;
+            QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
+            adding += 1;
+            holdertwo += 1;
+        }
+
+        if (ScoreNum >= qualityPollenPrice && holdertwo == 2)
+        {
+            ScoreNum -= 100;
+            MyscoreText.text = "" + ScoreNum;
+            qualityPollenPrice += 100;
+            QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
+            adding += 1;
+            holdertwo += 1;
+        }
+
+        if (ScoreNum >= qualityPollenPrice && holdertwo == 3)
+        {
+            ScoreNum -= 200;
+            MyscoreText.text = "" + ScoreNum;
+            qualityPollenPrice += 300;
+            QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
+            adding += 1;
+            holdertwo += 1;
+        }
+
+        if (ScoreNum >= qualityPollenPrice && holdertwo == 4)
+        {
+            ScoreNum -= 500;
+            MyscoreText.text = "" + ScoreNum;
+            qualityPollenPrice += 0;
+            QualityPollenPriceText.text = "Maxed";
+            adding += 1;
+            holdertwo += 1;
+
+        }
 
     }
 }

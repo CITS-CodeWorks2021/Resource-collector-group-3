@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nicholas/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/William/Scenes/start screen.unity
+    guid: afeb5db6e93640f43ba8d228c0cef18a
   m_configObjects: {}

@@ -648,3 +648,4 @@ Received Import Request.
 Start importing Assets/Nicholas/Scenes/button+score.unity using Guid(5323e327140e8354e9d6b8424fb5cf47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad7ad833ac61060699b2c0cdf556bfb8') in 0.002375 seconds 
   Import took 0.004846 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

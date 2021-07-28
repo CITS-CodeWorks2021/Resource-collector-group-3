@@ -10,7 +10,7 @@ public class SceneObserver : MonoBehaviour
     public GameObject pauseMenuUI;
     public void PlayGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void GameOver()
     {

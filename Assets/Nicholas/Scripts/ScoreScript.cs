@@ -191,8 +191,7 @@ public class ScoreScript : MonoBehaviour
         {
             ScoreNum -= 500;
             MyscoreText.text = "" + ScoreNum;
-            boostPrice += 500;
-            BoostPriceText.text = "Price: $" + boostPrice;
+            BoostPriceText.text = "Maximum Used";
             holderthree += 1;
 
             addOn *= 2;

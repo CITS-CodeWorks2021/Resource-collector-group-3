@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: dd2446048d26464479e8536435d59843
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Edge Of Madness
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2456b04562c9e374ea0b71ffb243fc4c, type: 3}
+  - {fileID: 12800000, guid: c18620aa3fff383458c358e09a7892da, type: 3}
+  - {fileID: 12800000, guid: f15e5636fbd24664ab3823356b33be53, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

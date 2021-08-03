@@ -6,15 +6,24 @@ using UnityEngine.SceneManagement;
 public class SceneObserver : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-
+    int whichScene;
     public GameObject pauseMenuUI;
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
+        whichScene = 1;
+        StartCoroutine(SceneDelay());
     }
     public void GameOver()
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        whichScene = 0;
+        StartCoroutine(SceneDelay());
+    }
+    IEnumerator SceneDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        SceneManager.LoadScene(whichScene);
     }
     void Update()
     {
@@ -45,6 +54,8 @@ public class SceneObserver : MonoBehaviour
     public void quit()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        whichScene = 0;
+        StartCoroutine(SceneDelay());
     }
 }

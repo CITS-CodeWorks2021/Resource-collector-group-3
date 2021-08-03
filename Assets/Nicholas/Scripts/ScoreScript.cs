@@ -19,9 +19,9 @@ public class ScoreScript : MonoBehaviour
     int holdertwo = 0;
     int holderthree = 0;
     int adding = 1;
+    float timer;
     private float startTime;
-    private float boostStartTime;
-    private float timer;
+    public static int bonusType;
 
     private void Start()
     {
@@ -98,6 +98,7 @@ public class ScoreScript : MonoBehaviour
             QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
             adding += 1;
             holdertwo += 1;
+            bonusType = 1;
         }
 
         if (ScoreNum >= qualityPollenPrice && holdertwo == 1)
@@ -108,6 +109,7 @@ public class ScoreScript : MonoBehaviour
             QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
             adding += 1;
             holdertwo += 1;
+            bonusType = 2;
         }
 
         if (ScoreNum >= qualityPollenPrice && holdertwo == 2)
@@ -118,6 +120,7 @@ public class ScoreScript : MonoBehaviour
             QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
             adding += 1;
             holdertwo += 1;
+            bonusType = 3;
         }
 
         if (ScoreNum >= qualityPollenPrice && holdertwo == 3)
@@ -128,6 +131,7 @@ public class ScoreScript : MonoBehaviour
             QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
             adding += 1;
             holdertwo += 1;
+            bonusType = 4;
         }
 
         if (ScoreNum >= qualityPollenPrice && holdertwo == 4)
@@ -138,6 +142,7 @@ public class ScoreScript : MonoBehaviour
             QualityPollenPriceText.text = "Maxed";
             adding += 1;
             holdertwo += 1;
+            bonusType = 5;
 
         }
 

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nicholas/Scenes/Main.unity
     guid: c6d0db2969d2bea4bacb16416e2dbb6a
+  - enabled: 1
+    path: Assets/William/Scenes/how to play.unity
+    guid: 06f70704510b1ae4ab1a545674ea6767
   m_configObjects: {}

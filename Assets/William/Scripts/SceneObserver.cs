@@ -58,4 +58,11 @@ public class SceneObserver : MonoBehaviour
         whichScene = 0;
         StartCoroutine(SceneDelay());
     }
+    public void how()
+    {
+        Time.timeScale = 1f;
+        //SceneManager.LoadScene(0);
+        whichScene = 2;
+        StartCoroutine(SceneDelay());
+    }
 }

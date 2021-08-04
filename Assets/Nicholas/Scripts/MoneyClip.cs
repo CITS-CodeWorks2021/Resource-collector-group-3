@@ -6,7 +6,7 @@ public class MoneyClip : MonoBehaviour
 {
     public ObjectPool moneySpawner;
     public float spawnDelay;
-    float currentTimer = 0;
+    //float currentTimer = 0;
     public void ClickToSpawn()
     {
         moneySpawner.SpawnRandom(transform.position);

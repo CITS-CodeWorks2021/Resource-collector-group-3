@@ -76,6 +76,10 @@ public class ObjectPool : MonoBehaviour
 
     void RemoveObject(int which)
     {
+        if (activeObjects.Count == 0)
+        {
+            return;
+        }
         activeObjects[which].SetActive(false);
         inactiveObjects.Add(activeObjects[which]);
         activeObjects.RemoveAt(which);

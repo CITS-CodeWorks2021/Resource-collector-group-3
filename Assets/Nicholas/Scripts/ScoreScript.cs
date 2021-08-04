@@ -10,14 +10,22 @@ public class ScoreScript : MonoBehaviour
     public Text WorkerBeePriceText;
     public Text QualityPollenPriceText;
     public Text BoostPriceText;
+    public Text Currentx2Text;
+    public GameObject Button1;
+    public GameObject Button2;
+    public GameObject Button3;
+    public GameObject Button4;
+    public ParticleSystem sparks;
     int ScoreNum = 0;
     int workerBeePrice = 10;
     int qualityPollenPrice = 5;
+    int currentx2Price = 500;
     int boostPrice = 50;
     int addOn = 1;
     int holder = 0;
     int holdertwo = 0;
     int holderthree = 0;
+    int holderfour = 0;
     int adding = 1;
     float timer;
     private float startTime;
@@ -29,6 +37,7 @@ public class ScoreScript : MonoBehaviour
         WorkerBeePriceText.text = "Price: $" + workerBeePrice;
         QualityPollenPriceText.text = "Price: $" + qualityPollenPrice;
         BoostPriceText.text = "Price: $" + boostPrice;
+        Currentx2Text.text = "Price: $" + currentx2Price;
         startTime = Time.time;
     }
 
@@ -43,8 +52,45 @@ public class ScoreScript : MonoBehaviour
     {
         ScoreNum += adding;
         MyscoreText.text = "" + ScoreNum;
+        
     } 
 
+    public void Currentx2()
+    {
+        if(ScoreNum >= currentx2Price && holderfour == 0)
+        {
+            ScoreNum = ScoreNum * 2;
+            MyscoreText.text = "" + ScoreNum;
+            ScoreNum -= 500;
+            MyscoreText.text = "" + ScoreNum;
+            currentx2Price += 500;
+            Currentx2Text.text = "Price: $" + currentx2Price;
+            holderfour += 1;
+
+        }
+        if (ScoreNum >= currentx2Price && holderfour == 1)
+        {
+            ScoreNum = ScoreNum * 2;
+            MyscoreText.text = "" + ScoreNum;
+            ScoreNum -= 500;
+            MyscoreText.text = "" + ScoreNum;
+            currentx2Price += 500;
+            Currentx2Text.text = "Price: $" + currentx2Price;
+            holderfour += 1;
+
+        }
+        if (ScoreNum >= currentx2Price && holderfour == 2)
+        {
+            ScoreNum = ScoreNum * 2;
+            MyscoreText.text = "" + ScoreNum;
+            ScoreNum -= 500;
+            MyscoreText.text = "" + ScoreNum;
+            currentx2Price += 0;
+            Currentx2Text.text = "Maxed";
+            holderfour += 1;
+
+        }
+    }
     public void workerBees()
     {
 
@@ -87,6 +133,8 @@ public class ScoreScript : MonoBehaviour
         ScoreNum += addOn;
         MyscoreText.text = "" + ScoreNum;
     }
+
+
 
     public void qualityPollen()
     {
@@ -148,7 +196,17 @@ public class ScoreScript : MonoBehaviour
 
     }
 
-    
+    void toggleActive(bool shouldActive)
+    {
+        Button1.SetActive(shouldActive);
+        Button2.SetActive(shouldActive);
+        Button3.SetActive(shouldActive);
+        Button4.SetActive(shouldActive);
+        WorkerBeePriceText.gameObject.SetActive(shouldActive);
+        QualityPollenPriceText.gameObject.SetActive(shouldActive);
+        BoostPriceText.gameObject.SetActive(shouldActive);
+        Currentx2Text.gameObject.SetActive(shouldActive);
+    }
 
     public void Boost()
     {
@@ -162,6 +220,8 @@ public class ScoreScript : MonoBehaviour
 
             addOn *= 2;
             adding *= 2;
+            bonusType = adding-1;
+            toggleActive(false);
             InvokeRepeating("nonBoost", 15f, 1f);
 
         }
@@ -176,6 +236,10 @@ public class ScoreScript : MonoBehaviour
 
             addOn *= 2;
             adding *= 2;
+            bonusType = adding-1;
+            toggleActive(false);
+
+
             InvokeRepeating("nonBoost", 15f, 1f);
         }
 
@@ -189,6 +253,8 @@ public class ScoreScript : MonoBehaviour
 
             addOn *= 2;
             adding *= 2;
+            bonusType = adding-1;
+            toggleActive(false);
             InvokeRepeating("nonBoost", 15f, 1f);
         }
 
@@ -201,6 +267,8 @@ public class ScoreScript : MonoBehaviour
 
             addOn *= 2;
             adding *= 2;
+            bonusType = adding-1;
+            toggleActive(false);
             InvokeRepeating("nonBoost", 15f, 1f);
         }
 
@@ -209,9 +277,41 @@ public class ScoreScript : MonoBehaviour
 
     public void nonBoost()
     {
+        resetDisplay();
         addOn /= 2;
         adding /= 2;
         MyscoreText.text = "" + ScoreNum;
+        toggleActive(true);
+
         CancelInvoke("nonBoost");
+
+    }
+
+    public void resetDisplay()
+    {
+        if (bonusType == 1)
+        {
+            bonusType = 0;
+        }
+        if (bonusType == 3)
+        {
+            bonusType = 1;
+        }
+        if (bonusType == 5)
+        {
+            bonusType = 2;
+        }
+        if (bonusType == 7)
+        {
+            bonusType = 3;
+        }
+        if (bonusType == 9)
+        {
+            bonusType = 4;
+        }
+        if (bonusType == 11)
+        {
+            bonusType = 5;
+        }
     }
 }

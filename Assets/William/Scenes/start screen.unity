@@ -315,7 +315,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 28
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -874,6 +874,10 @@ PrefabInstance:
     - target: {fileID: 1562247501539244890, guid: a30e86c9d2313b44da6c140820004e7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562247501539244892, guid: a30e86c9d2313b44da6c140820004e7e, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1562247501539244894, guid: a30e86c9d2313b44da6c140820004e7e, type: 3}
       propertyPath: m_Name

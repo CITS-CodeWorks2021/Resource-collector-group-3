@@ -15,6 +15,7 @@ public class MouseOver : MonoBehaviour
 
     private void OnMouseOver()
     {
+        Debug.Log("moused over " + gameObject.name);
         if (cououtineAllowed)
         {
             test.SetActive(true);

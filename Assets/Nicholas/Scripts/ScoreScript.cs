@@ -66,6 +66,7 @@ public class ScoreScript : MonoBehaviour
             currentx2Price += 500;
             Currentx2Text.text = "Price: $" + currentx2Price;
             holderfour += 1;
+            return;
 
         }
         if (ScoreNum >= currentx2Price && holderfour == 1)
@@ -77,6 +78,7 @@ public class ScoreScript : MonoBehaviour
             currentx2Price += 500;
             Currentx2Text.text = "Price: $" + currentx2Price;
             holderfour += 1;
+            return;
 
         }
         if (ScoreNum >= currentx2Price && holderfour == 2)
@@ -88,6 +90,7 @@ public class ScoreScript : MonoBehaviour
             currentx2Price += 0;
             Currentx2Text.text = "Maxed";
             holderfour += 1;
+            return;
 
         }
     }
